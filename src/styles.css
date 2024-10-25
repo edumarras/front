@@ -1,0 +1,195 @@
+/* Estilos Globais */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1a1a1a;
+  color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  text-align: center;
+  background-color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Sombra mais pronunciada */
+}
+
+/* Estilo do Título */
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #c33764, #3a48be);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Container de Botões */
+.button-container {
+  margin-top: 1.5rem;
+}
+
+/* Estilo dos Botões */
+button {
+  background-color: #8e44ad; /* Roxo fluorescente */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.8); /* Efeito fluorescente */
+}
+
+button:hover {
+  background-color: #9b59b6; /* Um pouco mais claro ao passar o mouse */
+  transform: scale(1.05); /* Leve efeito de zoom ao hover */
+  box-shadow: 0 0 25px rgba(155, 89, 182, 1);
+}
+
+/* Estilo dos Formulários */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #444; /* Campo de input escuro */
+  color: #eaeaea;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #8e44ad; /* Roxo fluorescente */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.8);
+}
+
+input[type="submit"]:hover {
+  background-color: #9b59b6;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 1);
+}
+
+/* Estilo das Mensagens de Erro */
+.error-message {
+  color: #e74c3c; /* Vermelho chamativo para erros */
+  font-size: 0.875rem;
+}
+
+/* Estilo dos Formulários */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente os itens */
+  margin-top: 20px;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background-color: #444; /* Campo de input escuro */
+  color: #eaeaea;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #8e44ad; /* Roxo fluorescente */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.8);
+}
+
+input[type="submit"]:hover {
+  background-color: #9b59b6;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 1);
+}
+
+/* Estilo dos Botões "Voltar" */
+.button-back {
+  background-color: #e74c3c; /* Vermelho para destacar o botão de voltar */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.8); /* Efeito de destaque */
+}
+
+.button-back:hover {
+  background-color: #c0392b; /* Um pouco mais escuro ao passar o mouse */
+  transform: scale(1.05); /* Leve efeito de zoom ao hover */
+  box-shadow: 0 0 15px rgba(192, 57, 43, 1);
+}
+
+/* Estilo das Mensagens de Erro */
+.error-message {
+  color: #e74c3c; /* Vermelho chamativo para erros */
+  font-size: 0.875rem;
+}
+
+.maker-tickets-container {
+  padding: 20px;
+}
+
+.ticket-form {
+  margin-bottom: 20px;
+}
+
+.ticket-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.ticket-form input,
+.ticket-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.ticket-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ticket-form button:hover {
+  background-color: #0056b3;
+}
+
+.ticket-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
