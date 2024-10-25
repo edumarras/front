@@ -1,0 +1,44 @@
+# Dockerfile
+# Estágio de build
+FROM node:20-alpine as build
+WORKDIR /app
+# Copia os arquivos de configuração
+COPY package*.json ./
+COPY tsconfig.json ./
+# Instala dependências
+RUN npm install --production=false \
+    loader-utils@3.2.1 \
+    react@18.2.0 \
+    react-dom@18.2.0 \
+    react-scripts@5.0.1 \
+    react-hook-form@7.53.0 \
+    axios@1.7.7 \
+    && npm install --save-dev \
+    @types/react@18.2.38 \
+    @types/react-dom@18.2.15 \
+    typescript@4.4.4
+# Copia o código fonte
+COPY public/ public/
+COPY src/ src/
+# Gera o build de produção
+RUN npm run build
+
+# Estágio de produção
+FROM nginx:1.25-alpine
+# Remove configuração padrão do nginx
+RUN rm /etc/nginx/conf.d/default.conf
+# Copia a configuração completa do nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+# Cria diretórios necessários
+RUN mkdir -p /var/log/nginx && \
+    mkdir -p /etc/nginx/modules-enabled && \
+    mkdir -p /etc/nginx/sites-enabled
+# Copia os arquivos de build
+COPY --from=build /app/build /usr/share/html
+# Configura permissões
+RUN chown -R nginx:nginx /usr/share/html && \
+    chmod -R 755 /usr/share/html
+# Expõe a porta 80
+EXPOSE 80
+# Inicia o Nginx
+CMD ["nginx", "-g", "daemon off;"]
